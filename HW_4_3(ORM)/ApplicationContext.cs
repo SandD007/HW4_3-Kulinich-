@@ -19,6 +19,8 @@ namespace HW43
 
         public DbSet<Title> Titles { get; set; }
 
+        public DbSet<Client> Clients { get; set; }
+
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options) 
         {
@@ -31,6 +33,7 @@ namespace HW43
             modelBuilder.ApplyConfiguration(new OfficeConfiguration());
             modelBuilder.ApplyConfiguration(new ProjectConfiguration());
             modelBuilder.ApplyConfiguration(new TitleConfiguration());
+            modelBuilder.ApplyConfiguration(new ClientConfiguration());
         }
     }
 }
