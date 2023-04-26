@@ -16,5 +16,9 @@ namespace HW43
         public decimal Budget { get; set; }
 
         public DateTime StartedData { get; set; }
+
+        public int ClientId { get; set; }
+
+        public virtual Client Client { get; set; }
     }
 }

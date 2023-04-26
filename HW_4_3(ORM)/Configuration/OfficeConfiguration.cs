@@ -24,6 +24,40 @@ namespace HW43
                 .Property(e => e.Location)
                 .IsRequired()
                 .HasMaxLength(100);
+
+            builder.HasData(new[]
+            {
+                new Office
+                {
+                    OfficeID = 1,
+                    Title = "Some Title",
+                    Location = "USA",
+                },                
+                new Office
+                {
+                    OfficeID = 2,
+                    Title = "Some Title2",
+                    Location = "Canada",
+                },                
+                new Office
+                {
+                    OfficeID = 3,
+                    Title = "Some Title3",
+                    Location = "Japan",
+                },                
+                new Office
+                {
+                    OfficeID = 4,
+                    Title = "Some Title4",
+                    Location = "Africa",
+                },                
+                new Office
+                {
+                    OfficeID = 5,
+                    Title = "Some Title5",
+                    Location = "UK",
+                },
+            });
         }
     }
 }
